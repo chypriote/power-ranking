@@ -2,15 +2,15 @@
   "name": "power-rankings",
   "version": "1.0.0",
   "description": "Community driven League of Legends power rankings",
-  "main": "index.js",
+  "main": "index.php",
+  "repository": "https://github.com/chypriote/power-ranking",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ChypRiotE",
   "license": "ISC",
   "dependencies": {
-    "dragula": "^3.6.3",
-    "milligram": "^1.1.0"
+    "dragula": "^3.6.3"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
