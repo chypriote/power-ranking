@@ -10,7 +10,7 @@
   "author": "ChypRiotE",
   "license": "ISC",
   "dependencies": {
-    "dragula": "^3.6.3"
+    "sortablejs": "^1.4.2"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",

@@ -23,15 +23,18 @@ textarea { resize: vertical; }
 		background-color: #101010;
 		min-height: 100%;
 	}
-	.container {
+	.main-container {
 		padding-left: 2rem;
 		padding-right: 2rem;
+		padding-top: 3.5rem;
 	}
 
 	/* Navigation */
 		#navigation {
 			background: black;
 			display: flex;
+			position: fixed;
+			width: 100%;
 		}
 		#navigation a {
 			margin-bottom: 0;
@@ -53,18 +56,30 @@ textarea { resize: vertical; }
 
 	/* Standings */
 		.standings-header h1 {
-			border-bottom: 1px solid #444b52;
 			font-size: 2.75rem;
 			line-height: 1;
 			text-transform: uppercase;
 			padding: 1rem 2rem;
 			margin: 0;
 		}
+		#sortable-container {
+			max-width: 50rem;
+			margin: auto;
+		}
+		#sortable-container > div {
+			cursor: move;
+			cursor: grab;
+			cursor: -moz-grab;
+			cursor: -webkit-grab;
+		}
 		.team-row	{
-			padding: 20px 0;
+			padding: .5em 0;
 			border-bottom: 1px solid #444b52;
 			display: flex;
 			flex-direction: row;
+		}
+		.team-row:first-child {
+			border-top: 1px solid #444b52;
 		}
 		.team-row:hover {
 			background-color: #050808;
@@ -72,20 +87,13 @@ textarea { resize: vertical; }
 		.team-row > div {
 			display: flex;
 			align-items: center;
-		}
-		.team-rank {
-			width: 10%;
-			justify-content: center;
-		}
-		.team-infos {
-			flex-grow: 1;
-		}
-		.team-infos .team-name {
-			flex-grow: 1;
 			padding: 0 2rem;
 		}
-		.team-infos .team-record {
-			padding: 0 2rem;
+		.team-name {
+			flex-grow: 1;
+		}
+		.team-logo img {
+			width: 50px;
 		}
 
 
