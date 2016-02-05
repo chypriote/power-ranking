@@ -9,3 +9,6 @@ Sauver les teams dans la BDD
 
 
 Fonction pour calculer les points d'une team
+
+
+Login avec reddit
