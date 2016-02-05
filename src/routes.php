@@ -10,18 +10,17 @@ $app->get('/', function ($request, $response, $args) {
 	return $this->renderer->render($response, 'index.phtml', $args);
 });
 
-$app->get('/login', function ($request, $response, $args) {
-	global $redditSettings;
-	$this->logger->info("Login initiated");
-	$reddit = new \Rudolf\OAuth2\Client\Provider\Reddit([
-    'clientId'      => $redditSettings['clientId'],
-    'clientSecret'  => $redditSettings['clientSecret'],
-    'redirectUri'   => $redditSettings['redirectUri'],
-    'userAgent'     => $redditSettings['userAgent'],
-    'scopes'        => $redditSettings['scope'],
-	]);
+$app->get('/connect', function($request, $response, $args) {
+	$reddit = new reddit();
+	return $this->renderer->render($response, 'login.phtml', $return);
+});
 
-	return $this->renderer->render($response, 'login.phtml', $args);
+$app->get('/login', function ($request, $response, $args) {
+	$this->logger->info("Login initiated");
+
+	$reddit = new reddit();
+	$return['user'] = $reddit->getUserAbout('chypriote');
+	return $this->renderer->render($response, 'login.phtml', $return);
 });
 
 $app->group('/ranking', function () {

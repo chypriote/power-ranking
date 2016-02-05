@@ -1,0 +1,9 @@
+<?php
+
+var_dump($_COOKIE['reddit_token']);
+
+var_dump($user);
+
+	$reddit = new reddit();
+	$test = $reddit->getUserAbout('chypriote');
+	var_dump($test);

@@ -14,7 +14,7 @@ $eloquentSettings = array(
 $redditSettings = array(
 	'clientId' => 'MZvnbQ8eCPrFGQ',
 	'clientSecret' => 'IqazsszPDUtkL3hY85xy1QhJ5ls',
-	'redirectUri' => 'http://ranking.chypriote.me',
-	'userAgent' => '',
-	'scope' => ''
+	'redirectUri' => 'http://localhost/power/public/login',
+	'userAgent' => 'platform:appid:version, (by /u/ChypRiotE)',
+	'scope' => '*'
 );
