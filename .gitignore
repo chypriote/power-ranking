@@ -6,3 +6,4 @@ node_modules/
 /vendor/
 /logs/*
 !/logs/README.md
+models/redditConfig.php
