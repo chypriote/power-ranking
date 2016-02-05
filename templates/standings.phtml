@@ -9,14 +9,17 @@
 				<h1><?php echo $test ?></h1>
 			</header>
 			<section id="sortable-container" class="standings-ranking">
-				<div class="team-row" data-id="g2esports">
-					<div class="team-logo">
-						<img src="http://am-a.akamaihd.net/image/?f=http://assets.lolesports.com/team/gamers2-b08he8l4.png&amp;resize=100:100" alt="G2 Esports">
+				<?php foreach $teams as $team { ?>
+					<div class="team-row" data-id="<?php= $team['short']; ?>">
+						<div class="team-logo">
+							<img src="img/<?php= $team['logo']; ?>.png" alt="<?php= $team['name']; ?>">
+						</div>
+						<div class="team-name">
+							<?php= $team['name']; ?>
+						</div>
 					</div>
-					<div class="team-name">
-						G2 Esports
-					</div>
-				</div>
+				<? } ?>
+
 				<div class="team-row" data-id="uol">
 					<div class="team-logo">
 						<img src="http://am-a.akamaihd.net/image/?f=http://assets.lolesports.com/team/unicorns-of-love-acxt0jy4.png&resize=100:100" alt="H2k">
