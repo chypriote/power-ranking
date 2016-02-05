@@ -16,6 +16,12 @@
         "slim/slim": "^3.1",
         "slim/php-view": "^2.0",
         "monolog/monolog": "^1.17",
-        "rtheunissen/oauth2-reddit": "^1.2"
+        "rtheunissen/oauth2-reddit": "^1.2",
+        "illuminate/database": "^5.2"
+    },
+    "autoload": {
+        "classmap": [
+            "models"
+        ]
     }
 }

@@ -9,89 +9,16 @@
 				<h1><?php echo $test ?></h1>
 			</header>
 			<section id="sortable-container" class="standings-ranking">
-				<?php foreach $teams as $team { ?>
-					<div class="team-row" data-id="<?php= $team['short']; ?>">
+				<?php foreach ($teams as $team) { ?>
+					<div class="team-row" data-id="<?= $team['short']; ?>">
 						<div class="team-logo">
-							<img src="img/<?php= $team['logo']; ?>.png" alt="<?php= $team['name']; ?>">
+							<img src="<?= $local ?>img/logos/<?= $team['logo']; ?>" alt="<?= $team['name']; ?>">
 						</div>
 						<div class="team-name">
-							<?php= $team['name']; ?>
+							<?= $team['name']; ?>
 						</div>
 					</div>
-				<? } ?>
-
-				<div class="team-row" data-id="uol">
-					<div class="team-logo">
-						<img src="http://am-a.akamaihd.net/image/?f=http://assets.lolesports.com/team/unicorns-of-love-acxt0jy4.png&resize=100:100" alt="H2k">
-					</div>
-					<div class="team-name">
-						Unicorns of Love
-					</div>
-				</div>
-				<div class="team-row" data-id="fnatic">
-					<div class="team-logo">
-						<img src="http://am-a.akamaihd.net/image/?f=http://assets.lolesports.com/team/fnatic-1jz4gx6t.png&resize=100:100" alt="H2k">
-					</div>
-					<div class="team-name">
-						Fnatic
-					</div>
-				</div>
-				<div class="team-row" data-id="elements">
-					<div class="team-logo">
-						<img src="http://am-a.akamaihd.net/image/?f=http://assets.lolesports.com/team/elements-hl4t97vj.png&resize=100:100" alt="H2k">
-					</div>
-					<div class="team-name">
-						Elements
-					</div>
-				</div>
-				<div class="team-row" data-id="h2k">
-					<div class="team-logo">
-						<img src="http://am-a.akamaihd.net/image/?f=http://assets.lolesports.com/team/h2k-809eyzf8.png&resize=100:100" alt="H2k">
-					</div>
-					<div class="team-name">
-						H2k
-					</div>
-				</div>
-				<div class="team-row" data-id="origen">
-					<div class="team-logo">
-						<img src="http://am-a.akamaihd.net/image/?f=http://assets.lolesports.com/team/origen-2wse5ns8.png&resize=100:100" alt="G2 Esports">
-					</div>
-					<div class="team-name">
-						Origen
-					</div>
-				</div>
-				<div class="team-row" data-id="splyce">
-					<div class="team-logo">
-						<img src="http://am-a.akamaihd.net/image/?f=http://assets.lolesports.com/team/splyce-81ipjuao.png&resize=100:100" alt="H2k">
-					</div>
-					<div class="team-name">
-						Splyce
-					</div>
-				</div>
-				<div class="team-row" data-id="vitality">
-					<div class="team-logo">
-						<img src="http://am-a.akamaihd.net/image/?f=http://assets.lolesports.com/team/vitality-9z83n51v.png&resize=100:100" alt="H2k">
-					</div>
-					<div class="team-name">
-						Team Vitality
-					</div>
-				</div>
-				<div class="team-row" data-id="roccat">
-					<div class="team-logo">
-						<img src="http://am-a.akamaihd.net/image/?f=http://assets.lolesports.com/team/roccat-3rt7loly.png&resize=100:100" alt="H2k">
-					</div>
-					<div class="team-name">
-						Team ROCCAT
-					</div>
-				</div>
-				<div class="team-row" data-id="giants">
-					<div class="team-logo">
-						<img src="http://am-a.akamaihd.net/image/?f=http://assets.lolesports.com/team/giants-gaming-aji5fbac.png&resize=100:100" alt="H2k">
-					</div>
-					<div class="team-name">
-						Giants
-					</div>
-				</div>
+				<?php } ?>
 			</section>
 		</main>
 		<?php include('includes/closure.php'); ?>

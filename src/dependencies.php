@@ -17,3 +17,12 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], Monolog\Logger::DEBUG));
     return $logger;
 };
+
+require 'config.php';
+$cont = new Illuminate\Container\Container;
+$connFactory = new \Illuminate\Database\Connectors\ConnectionFactory($cont);
+$conn = $connFactory->make($eloquentSettings);
+$resolver = new \Illuminate\Database\ConnectionResolver();
+$resolver->addConnection('default', $conn);
+$resolver->setDefaultConnection('default');
+\Illuminate\Database\Eloquent\Model::setConnectionResolver($resolver);

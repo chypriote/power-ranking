@@ -1,3 +1,13 @@
+<?php
+	$whitelist = array(
+    '127.0.0.1',
+    '::1',
+    'localhost'
+);
+if(in_array($_SERVER['REMOTE_ADDR'], $whitelist)){
+	$local="/power/public/";
+}
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 	<head>
@@ -7,8 +17,8 @@
 		<meta name="description" content="Community powered League of Legends power rankings">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="<?= $local ?>css/normalize.css">
+		<link rel="stylesheet" href="<?= $local ?>css/main.css">
 
-		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		<script src="/js/vendor/modernizr-2.8.3.min.js"></script>
 	</head>

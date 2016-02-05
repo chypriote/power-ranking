@@ -1,2 +1,2 @@
-<script src="js/vendor/Sortable.min.js"></script>
-<script src="js/main.js"></script>
+<script src="<?= $local ?>js/vendor/Sortable.min.js"></script>
+<script src="<?= $local ?>js/main.js"></script>
